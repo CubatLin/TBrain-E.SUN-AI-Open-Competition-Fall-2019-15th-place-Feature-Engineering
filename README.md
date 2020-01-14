@@ -1,6 +1,6 @@
-TBrain E.SUN AI Open Competition Fall 2019 15th place(top1%) Feature Engineering
+玉山銀行人工智慧公開挑戰賽_2019秋季賽_真相只有一個_信用卡盜刷偵測-15th place(top1%) Feature Engineering
 ======================================
-* **比賽網址：**[玉山銀行人工智慧公開挑戰賽_2019秋季賽_真相只有一個_信用卡盜刷偵測](https://tbrain.trendmicro.com.tw/Competitions/Details/10)
+* **比賽網址：**[TBrain E.SUN AI Open Competition Fall 2019 ](https://tbrain.trendmicro.com.tw/Competitions/Details/10)
 
 * **參賽成績：**
 ```
