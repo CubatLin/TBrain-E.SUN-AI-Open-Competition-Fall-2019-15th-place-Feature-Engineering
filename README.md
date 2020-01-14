@@ -43,7 +43,7 @@ Rolling Mode Feature & Leakage Mode
   * Cat1:模擬MCC、交易類別等類別變數
   * ID:模擬JoinKey(txkey)
 
-* **Cat1_ModeFrame::**
+* **Cat1_ModeFrame:**
   * ID:模擬JoinKey(txkey)
   * GroupKey:模擬卡號
   * Cat1_Mode:Group Rolling Mode
