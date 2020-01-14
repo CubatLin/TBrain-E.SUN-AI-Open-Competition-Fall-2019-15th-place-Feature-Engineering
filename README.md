@@ -1,7 +1,7 @@
 TBrain E.SUN AI Open Competition Fall 2019 15th place(top1%) Feature Engineering
 ======================================
-* **比賽網址:**[Competition Link](https://tbrain.trendmicro.com.tw/Competitions/Details/10)
-* **參賽成績:**
+* **比賽網址:  **[Competition Link](https://tbrain.trendmicro.com.tw/Competitions/Details/10)
+* **參賽成績:  **
 ```
 Team:菜雞互啄
 Members:Alexi,Pat,Michael,Ming-Xiang,Ethan
@@ -9,6 +9,7 @@ F1 score prediction competition: 15th of 1366 teams
 Creativity presentation competition: 2nd
 ```
 * **參賽海報(閃電獎2nd):**
+[菜雞互啄_海報](https://github.com/CubatLin/TBrain-E.SUN-AI-Open-Competition-Fall-2019-15th-place-Feature-Engineering/blob/master/%E8%8F%9C%E9%9B%9E%E4%BA%92%E5%95%84_%E7%8E%89%E5%B1%B1%E9%8A%80%E8%A1%8C2019%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E7%A7%8B%E5%AD%A3%E5%85%AC%E9%96%8B%E6%8C%91%E6%88%B0%E8%B3%BD%E5%85%A8%E9%96%8B%E6%B5%B7%E5%A0%B1.pdf)
 
 Rule
 ========
@@ -23,24 +24,25 @@ Rule
 Rolling Mode Feature & Leckage Mode
 ==================
 * **Insight:**
-    *信用卡有特定通路使用、無腦刷、適合外國消費的雙幣卡等各種功能，其中特定通路使用的卡片在MCC、交易類型等Feature，眾數的集中程度應該是非常顯著的；若特定通路卡片之眾數有所改變，可以視為消費習性與個人過去消費習性相比有所改變。
+信用卡有特定通路使用、無腦刷、適合外國消費的雙幣卡等各種功能，其中特定通路使用的卡片在MCC、交易類型等Feature，眾數的集中程度應該是非常顯著的；若特定通路卡片之眾數有所改變，可以視為消費習性與個人過去消費習性相比有所改變。
 
 * **Problem:**
-    *若直接Groupby卡號計算眾數並視為Feature，此時會有把未來資料提前納入考量的leckage問題。
+若直接Groupby卡號計算眾數並視為Feature，此時會有把未來資料提前納入考量的leckage問題。
 
 * **Solution:**
-    *計算單一卡號在此筆消費以前的眾數為何，若有兩個眾數再透過Grouping leckage mode去修正。
+計算單一卡號在此筆消費以前的眾數為何，若有兩個眾數再透過Grouping leckage mode去修正。
 
 說明
 =======
+![image](https://github.com/CubatLin/TBrain-E.SUN-AI-Open-Competition-Fall-2019-15th-place-Feature-Engineering/blob/master/Mode_Demonstration.jpg)
 
-* **df:**
+**df:**
 1.Time:模擬交易時間
 2.GroupKey:模擬卡號
 3.Cat1:模擬MCC、交易類別等類別變數
 4.ID:模擬JoinKey(txkey)
 
-* **Cat1_ModeFrame::**
+**Cat1_ModeFrame::**
 1.ID:模擬JoinKey(txkey)
 2.GroupKey:模擬卡號
 3.Cat1_Mode:Group Rolling Mode
