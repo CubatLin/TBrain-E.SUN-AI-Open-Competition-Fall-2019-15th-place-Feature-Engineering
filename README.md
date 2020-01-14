@@ -1,15 +1,15 @@
 TBrain E.SUN AI Open Competition Fall 2019 15th place(top1%) Feature Engineering
 ======================================
-* **比賽網址： **[Competition Link](https://tbrain.trendmicro.com.tw/Competitions/Details/10)
+* **比賽網址：**[玉山銀行人工智慧公開挑戰賽_2019秋季賽_真相只有一個_信用卡盜刷偵測](https://tbrain.trendmicro.com.tw/Competitions/Details/10)
 
-* **參賽成績： **
+* **參賽成績：**
 ```
 Team:菜雞互啄
 Members:Alexi,Pat,Michael,Ming-Xiang,Ethan
 F1 score prediction competition: 15th of 1366 teams
 Creativity presentation competition: 2nd
 ```
-* **參賽海報(閃電獎2nd)： **[菜雞互啄_海報](https://github.com/CubatLin/TBrain-E.SUN-AI-Open-Competition-Fall-2019-15th-place-Feature-Engineering/blob/master/%E8%8F%9C%E9%9B%9E%E4%BA%92%E5%95%84_%E7%8E%89%E5%B1%B1%E9%8A%80%E8%A1%8C2019%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E7%A7%8B%E5%AD%A3%E5%85%AC%E9%96%8B%E6%8C%91%E6%88%B0%E8%B3%BD%E5%85%A8%E9%96%8B%E6%B5%B7%E5%A0%B1.pdf)
+* **參賽海報(閃電獎2nd)：**[菜雞互啄_海報](https://github.com/CubatLin/TBrain-E.SUN-AI-Open-Competition-Fall-2019-15th-place-Feature-Engineering/blob/master/%E8%8F%9C%E9%9B%9E%E4%BA%92%E5%95%84_%E7%8E%89%E5%B1%B1%E9%8A%80%E8%A1%8C2019%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E7%A7%8B%E5%AD%A3%E5%85%AC%E9%96%8B%E6%8C%91%E6%88%B0%E8%B3%BD%E5%85%A8%E9%96%8B%E6%B5%B7%E5%A0%B1.pdf)
 * **Feature Engineering： **[Python Code](https://github.com/CubatLin/TBrain-E.SUN-AI-Open-Competition-Fall-2019-15th-place-Feature-Engineering/blob/master/%E8%8F%9C%E9%9B%9E%E4%BA%92%E5%95%84_ModeCode.py)
 
 Rule
