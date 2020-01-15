@@ -86,7 +86,7 @@ def Rolling_Mode_Function(df,GroupKey,JoinKey,Var,Leakage=False):
     if Leakage==False:
         data.columns = [str(JoinKey),str(GroupKey),Var+"_mode",Var+"_mode_count"]
     else:
-        data.columns = [str(JoinKey),str(GroupKey),Var+"_mode",Var+"_mode_count",Var+"_mode_Leckage"]
+        data.columns = [str(JoinKey),str(GroupKey),Var+"_mode",Var+"_mode_count",Var+"_mode_Leakage"]
     globals()[Var + "_ModeFrame" ] = data
     print("Done: "+Var+"_ModeFrame")
 
