@@ -6,6 +6,7 @@
 #Creativity presentation competition: 2nd
 #Competition Link: https://tbrain.trendmicro.com.tw/Competitions/Details/10
 #--------------------------------------------------------------------------#
+%reset -f
 import pandas as pd
 import numpy as np
 import copy
@@ -36,7 +37,7 @@ def Get_Mode(mode_dic):
        return mode_list
 
 #Part2:Main Fucntion with Leakage option   
-def Rolling_Mode_Function(df,GroupKey,JoinKey,Var,Leakage=False):
+def Main_Mode_Function(df,GroupKey,JoinKey,Var,Leakage=False):
     tmp = copy.deepcopy(df)
     tmp_list = [list(tmp[JoinKey]),
                 list(tmp[GroupKey]),
@@ -52,14 +53,7 @@ def Rolling_Mode_Function(df,GroupKey,JoinKey,Var,Leakage=False):
         if data[i][1]!=GroupKey_bool:
             if (Leakage==True and i>0):
                 save_point=i
-                mode_dic_list = {value: key for key, value in mode_dic.items()}
-                mode_dic_list = [(str(mode_dic_list[d])) for d in sorted(mode_dic_list.keys(),reverse = True)]
-                for j in range(start_point,save_point,1):
-                    data[j].append([])
-                    for l in range(len(mode_dic_list)):
-                        if mode_dic_list[l] in set(data[j][2]):
-                           data[j][4].append(mode_dic_list[l])
-                           break;              
+                Leakage_Mode(data,mode_dic,start_point,save_point)
                 start_point=save_point
             GroupKey_bool=data[i][1]
             mode_dic={}
@@ -73,14 +67,7 @@ def Rolling_Mode_Function(df,GroupKey,JoinKey,Var,Leakage=False):
             data[i][3] = len(mode_value)
 
     save_point=i+1
-    mode_dic_list = {value: key for key, value in mode_dic.items()}
-    mode_dic_list = [(str(mode_dic_list[d])) for d in sorted(mode_dic_list.keys(),reverse = True)]
-    for j in range(start_point,save_point,1):
-        data[j].append([])
-        for l in range(len(mode_dic_list)):
-            if mode_dic_list[l] in set(data[j][2]):
-                data[j][4].append(mode_dic_list[l])
-                break;
+    Leakage_Mode(data,mode_dic,start_point,save_point)
 
     data=DataFrame(data)
     if Leakage==False:
@@ -90,12 +77,22 @@ def Rolling_Mode_Function(df,GroupKey,JoinKey,Var,Leakage=False):
     globals()[Var + "_ModeFrame" ] = data
     print("Done: "+Var+"_ModeFrame")
 
+#Part3:Grouping Leakage Mode
+def Leakage_Mode(data,mode_dic,start_point,save_point):
+    mode_dic_list = {value: key for key, value in mode_dic.items()}
+    mode_dic_list = [(str(mode_dic_list[d])) for d in sorted(mode_dic_list.keys(),reverse = True)]
+    for j in range(start_point,save_point,1):
+        data[j].append([])
+        for l in range(len(mode_dic_list)):
+            if mode_dic_list[l] in set(data[j][2]):
+               data[j][4].append(mode_dic_list[l])
+               break;              
+
 #Input four parameters:
 #Rolling_Mode_Function(DataFrame,Grouping Key,JoinKey,Feature)
 import time
 tStart = time.time()
 
-Rolling_Mode_Function(df,'GroupKey','ID','Cat1',Leakage=True)
-
+Main_Mode_Function(df,'GroupKey','ID','Cat1',Leakage=True)
 tEnd = time.time()
 print ("It cost %f sec" % (tEnd - tStart))
