@@ -48,4 +48,4 @@ Rolling Mode Feature & Leakage Mode
   * GroupKey:模擬卡號
   * Cat1_Mode:Group Rolling Mode
   * Cat1_Mode_count:有幾個Mode
-  * Cat1_Mode_Leckage: Group Leakage Mode
+  * Cat1_Mode_Leakage: Group Leakage Mode
