@@ -14,6 +14,7 @@ Creativity presentation competition: 2nd of final 20 teams
 
 * **菜雞成員Link：**[Alex Lau](https://github.com/alexlautw9527), [Pat Wu](https://github.com/ts01174755),[Michael Shen](https://github.com/changsian), [Ming-Xiang](https://github.com/kuo23)
 
+![image](https://github.com/CubatLin/TBrain-E.SUN-AI-Open-Competition-Fall-2019-15th-place-Feature-Engineering/blob/master/%E8%8F%9C%E9%9B%9E%E4%BA%92%E5%95%84_%E5%B0%91%E4%BA%86AlexQ__Q.JPG)
 
 Description 
 ===========
